@@ -1,20 +1,21 @@
 import React from "react";
 import css from "./ImageGallery.module.css";
+import { Image } from "../../types/image";
 
 
-interface Image {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  alt_description: string;
-  description?: string;
-  user: {
-    name: string;
-  };
-  likes: number;
-}
+// interface Image {
+//   id: string;
+//   urls: {
+//     small: string;
+//     regular: string;
+//   };
+//   alt_description: string;
+//   description?: string;
+//   user: {
+//     name: string;
+//   };
+//   likes: number;
+// }
 
 
 interface ImageGalleryProps {

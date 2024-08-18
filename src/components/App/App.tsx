@@ -8,22 +8,23 @@ import ImageModal from "../ImageModal/ImageModal";
 import Modal from "react-modal";
 import { fetchArticles } from "../../articles-api";
 import { Toaster } from "react-hot-toast";
+import { Image } from "../../types/image";
 
 import css from "./App.module.css";
 
-interface Image {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  alt_description: string;
-  description?: string;
-  user: {
-    name: string;
-  };
-  likes: number;
-}
+// interface Image {
+//   id: string;
+//   urls: {
+//     small: string;
+//     regular: string;
+//   };
+//   alt_description: string;
+//   description?: string;
+//   user: {
+//     name: string;
+//   };
+//   likes: number;
+// }
 
 Modal.setAppElement("#root");
 
