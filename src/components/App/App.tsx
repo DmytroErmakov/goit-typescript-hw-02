@@ -50,8 +50,12 @@ export default function App() {
     try {
       const data = await fetchArticles(searchQuery, pageNum);
       setImages(prevImages => [...prevImages, ...data.results]);
-    } catch (error) {
-      setError("Failed to fetch images. Please try again.");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(`Failed to fetch images: ${error.message}`);
+      } else {
+        setError("Failed to fetch images. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
